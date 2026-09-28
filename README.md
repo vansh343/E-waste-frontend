@@ -87,7 +87,6 @@ their QR.
 ## Notes
 - OTP is not validated server-side (demo). Company accounts are auto-approved on signup.
 - **Admin panel** (`/admin`) — the backend seeds an admin on startup at phone
-  **`9876543210`** (log in as that phone). Five screens: Dashboard (counts + shortcuts),
   Sab Users (role-tab filter + suspend/activate/promote/delete), Sare Deals, Companies, and
   Approval Queue (approve/reject pending companies).
 - QR flow: each side scans the *counterparty's* QR (GET `/deal/{id}/qr/me` returns the QR image;
