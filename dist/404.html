@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kabadi Connect</title>
+    <script>
+      // SPA fallback for static hosts that serve this file for unmatched
+      // paths. React Router owns the routes, so the real entry point is "/".
+      // Remember where the user actually was, then hand control to main.jsx,
+      // which restores the path before the router initialises.
+      try {
+        sessionStorage.setItem(
+          'kabadi-redirect',
+          location.pathname + location.search + location.hash
+        );
+      } catch (e) {
+        /* private mode — fall through, the app still loads at "/" */
+      }
+      location.replace('/');
+    </script>
+  </head>
+  <body></body>
+</html>
